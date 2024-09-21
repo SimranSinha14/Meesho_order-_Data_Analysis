@@ -10,3 +10,4 @@ Insight are provided on the following key areas:
   - Shipping and Cost Analysis: Understanding shipping costs & gst and their impact on overall pricing.
 
 The SQL queries utilised for the analysis https://github.com/SimranSinha14/Meesho_order-_Data_Analysis/issues/1#issue-2540437967
+
