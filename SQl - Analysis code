@@ -1,0 +1,83 @@
+-- CUSTOMER PURCHASING TRENDS
+-- Top States with the Highest Order Volume
+
+SELECT state ,COUNT(order_num) as total_order
+FROM `meesho-data-analysis.Meesho_order_data.Aug_order_data` 
+GROUP BY state
+ORDER BY total_order DESC;
+
+-- Popular product 'Category' and 'Size'
+
+SELECT product_name,size, SUM(quantity) as total_quantity
+FROM `meesho-data-analysis.Meesho_order_data.Aug_order_data` 
+GROUP BY product_name,size
+ORDER BY 3 DESC;
+
+-- Day of month with highest order
+SELECT order_date, COUNT(order_num) as total_order
+FROM `meesho-data-analysis.Meesho_order_data.Aug_order_data` 
+GROUP BY order_date
+ORDER BY 1 DESC;
+
+-- ORDER CANCELLATIONS AND FINAL STATUS
+-- Cacellation rate by states
+
+SELECT o.state,
+COUNT(o.order_num) AS total_orders,
+  SUM(CASE WHEN f.final_order_status = 'Cancelled' THEN 1 ELSE 0 END) AS total_cancellations,
+  ROUND(SUM(CASE WHEN f.final_order_status = 'Cancelled' THEN 1 ELSE 0 END) / COUNT(o.order_num) * 100, 2) AS cancellation_rate
+FROM `meesho-data-analysis.Meesho_order_data.Aug_order_data` as o
+JOIN `meesho-data-analysis.Meesho_order_data.forward_report_data` as f
+ON o.order_num = f.order_num
+GROUP BY o.state
+ORDER BY cancellation_rate DESC;
+
+-- Product with highest cancellation rate
+
+SELECT o.product_name,
+COUNT(o.product_name) AS total_orders,
+  SUM(CASE WHEN f.final_order_status = 'Cancelled' THEN 1 ELSE 0 END) AS total_cancellations,
+  ROUND(SUM(CASE WHEN f.final_order_status = 'Cancelled' THEN 1 ELSE 0 END) / COUNT(o.product_name) * 100, 2) AS cancellation_rate
+FROM `meesho-data-analysis.Meesho_order_data.Aug_order_data` as o
+JOIN `meesho-data-analysis.Meesho_order_data.forward_report_data` as f
+ON o.order_num = f.order_num
+GROUP BY o.product_name
+ORDER BY cancellation_rate DESC;
+
+-- Order Value Insights
+-- Average Order Value (AOV) by State
+
+SELECT 
+  state, 
+  AVG(total_price) AS avg_order_value 
+FROM `meesho-data-analysis.Meesho_order_data.forward_report_data`
+GROUP BY 
+  state
+ORDER BY 
+  avg_order_value DESC;
+
+-- Shipping Cost and GST
+-- States with Highest Shipping Costs
+
+SELECT state, AVG(shipping_charges_total) AS avg_shipping_cost 
+FROM `meesho-data-analysis.Meesho_order_data.forward_report_data`
+GROUP BY state
+ORDER BY avg_shipping_cost DESC;
+
+-- GST Contribution to Total Price
+SELECT state, Round(AVG(gst_amount / total_price * 100),2) AS avg_gst_percentage
+FROM `meesho-data-analysis.Meesho_order_data.forward_report_data`
+GROUP BY state
+ORDER BY avg_gst_percentage DESC;
+
+-- Return and Refund Analysis
+-- Return Rate by State
+
+SELECT o.state, COUNT(o.order_num) AS total_orders,
+  SUM(CASE WHEN f.final_order_status = 'Returned' THEN 1 ELSE 0 END) AS total_returns,
+  ROUND(SUM(CASE WHEN f.final_order_status = 'Returned' THEN 1 ELSE 0 END) / COUNT(o.order_num) * 100, 2) AS return_rate
+FROM `meesho-data-analysis.Meesho_order_data.Aug_order_data` as o
+JOIN `meesho-data-analysis.Meesho_order_data.forward_report_data` as f
+ON o.order_num = f.order_num
+GROUP BY o.state
+ORDER BY return_rate DESC;
