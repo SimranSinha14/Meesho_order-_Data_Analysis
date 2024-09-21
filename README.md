@@ -8,3 +8,5 @@ Insight are provided on the following key areas:
   - Cancellation and Return Rates: Analyzing factors contributing to order cancellations and returns.
   - Order Value Assessment: Evaluating average order values 
   - Shipping and Cost Analysis: Understanding shipping costs & gst and their impact on overall pricing.
+
+The SQL queries utilised for the analysis 
