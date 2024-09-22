@@ -23,8 +23,7 @@ The Schemas of forward report (fig1) and August order (fig2) are as follows:
   Lehengha, with 33.33% cancellations, suggesting issues with this SKU. Additionally, the return rate in states like Odisha, Arunachal Pradesh, and UP is 
   alarmingly high at 100%, requiring immediate action to understand and mitigate returns in these regions.
   
-  ![image1](https://github.com/SimranSinha14/Meesho_order-_Data_Analysis/blob/d9142f940cc7d2c326a5f976cd326b8c97244e58/top%205%20product.png)
-  ![image](
+ 
     
   
 
