@@ -13,6 +13,7 @@ Insight are provided on the following key areas:
 The SQL queries utilised for the analysis [here](https://github.com/SimranSinha14/Meesho_order-_Data_Analysis/issues/1#issue-2540437967)
 
 The Schemas of forward report (fig1) and August order (fig2) are as follows:
-  - ![schema 1](https://github.com/SimranSinha14/Meesho_order-_Data_Analysis/blob/6d648b77d7e4f7e873736a24b6e19f206391f9c9/forward_report.png)
-  - ![schema2](https://github.com/SimranSinha14/Meesho_order-_Data_Analysis/blob/56ec7cf472e0fda1f921c04355454b0a0d86ff7a/aug_order.png)
+
+  ![schema 1](https://github.com/SimranSinha14/Meesho_order-_Data_Analysis/blob/6d648b77d7e4f7e873736a24b6e19f206391f9c9/forward_report.png)
+  ![schema2](https://github.com/SimranSinha14/Meesho_order-_Data_Analysis/blob/56ec7cf472e0fda1f921c04355454b0a0d86ff7a/aug_order.png)
 
