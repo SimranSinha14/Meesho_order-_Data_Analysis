@@ -17,3 +17,11 @@ The Schemas of forward report (fig1) and August order (fig2) are as follows:
   ![schema 1](https://github.com/SimranSinha14/Meesho_order-_Data_Analysis/blob/6d648b77d7e4f7e873736a24b6e19f206391f9c9/forward_report.png)
   ![schema2](https://github.com/SimranSinha14/Meesho_order-_Data_Analysis/blob/56ec7cf472e0fda1f921c04355454b0a0d86ff7a/aug_order.png)
 
+  ## Excecutive Summary
+  Our analysis reveals key insights into customer behavior. The most popular product is the Party Wear Look Heavy Embroidery and Sequins Gown with Dupatta (Free 
+  Size), highlighting demand for festive wear in flexible sizes. Madhya Pradesh shows the highest cancellation rate at 16.67%, followed closely by Jammu & Kashmir    and West Bengal, indicating potential supply chain or satisfaction issues. The product with the highest cancellation rate is the Fivestar Bridal Wedding 
+  Lehengha, with 33.33% cancellations, suggesting issues with this SKU. Additionally, the return rate in states like Odisha, Arunachal Pradesh, and UP is 
+  alarmingly high at 100%, requiring immediate action to understand and mitigate returns in these regions.
+  
+
+
