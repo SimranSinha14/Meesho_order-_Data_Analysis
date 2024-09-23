@@ -74,8 +74,8 @@ ORDER BY avg_gst_percentage DESC;
 -- Return Rate by State
 
 SELECT o.state, COUNT(o.order_num) AS total_orders,
-  SUM(CASE WHEN f.final_order_status = 'Returned' THEN 1 ELSE 0 END) AS total_returns,
-  ROUND(SUM(CASE WHEN f.final_order_status = 'Returned' THEN 1 ELSE 0 END) / COUNT(o.order_num) * 100, 2) AS return_rate
+  SUM(CASE WHEN f.final_order_status = 'Return' THEN 1 ELSE 0 END) AS total_returns,
+  ROUND(SUM(CASE WHEN f.final_order_status = 'Return' AND o.initial_order_status = 'Delivered' THEN 1 ELSE 0 END) / COUNT(o.order_num) * 100, 2) AS return_rate
 FROM `meesho-data-analysis.Meesho_order_data.Aug_order_data` as o
 JOIN `meesho-data-analysis.Meesho_order_data.forward_report_data` as f
 ON o.order_num = f.order_num
