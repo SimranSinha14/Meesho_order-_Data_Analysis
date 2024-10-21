@@ -1,5 +1,5 @@
 # Project Background
-### Tools used : Big Query Sandbox and Looker
+### Tools used : Big Query Sandbox and Looker Studio
 ## Meesho Suppliers August month selling data,2022
 Meesho, short for "Meri Shop" (meaning "My Shop"), is an Indian e-commerce company based in Bangalore. It operates as an online marketplace, connecting suppliers, resellers, and customers. 
 
