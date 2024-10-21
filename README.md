@@ -1,6 +1,7 @@
 # Project Background
 ## Meesho Suppliers August month selling data,2022
 Meesho, short for "Meri Shop" (meaning "My Shop"), is an Indian e-commerce company based in Bangalore. It operates as an online marketplace, connecting suppliers, resellers, and customers. 
+## Tools used : Big Query Sandbox and Looker
 
 The data from Meesho is typically gathered through its platform, which records transactions between suppliers, resellers, and customers. This includes order details, product information, pricing, shipping charges, and taxes. These datasets are often used for analyzing customer behavior, order trends, cancellations, and logistical costs.
 
@@ -22,6 +23,8 @@ The Schemas of forward report (fig1) and August order (fig2) are as follows:
   Size), highlighting demand for festive wear in flexible sizes. Madhya Pradesh shows the highest cancellation rate at 16.67%, followed closely by Jammu & Kashmir    and West Bengal, indicating potential supply chain or satisfaction issues. The product with the highest cancellation rate is the Fivestar Bridal Wedding 
   Lehengha, with 33.33% cancellations, suggesting issues with this SKU. Additionally, the return rate in states like Odisha, Arunachal Pradesh, and UP is 
   alarmingly high at 100%, requiring immediate action to understand and mitigate returns in these regions.
+
+  For visual report [click](https://lookerstudio.google.com/reporting/ba43f514-dd4d-4ae5-b358-eb5403f461ee)
   
  
     
