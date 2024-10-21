@@ -26,6 +26,7 @@ The Schemas of forward report (fig1) and August order (fig2) are as follows:
   alarmingly high at 100%, requiring immediate action to understand and mitigate returns in these regions.
 
   For visual report [click](https://lookerstudio.google.com/s/h73DlZVaD98)
+  (https://github.com/SimranSinha14/Meesho_order-_Data_Analysis/blob/784dc481622753fcf52c92ded12e75fa9507af88/Meesho_Sales_Analysis.pdf)
   
  
     
